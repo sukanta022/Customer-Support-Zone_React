@@ -1,4 +1,3 @@
-
 const Navbar = () => {
   return (
     <div className="w-11/12 mx-auto py-5 content-box flex flex-col lg:flex-row justify-center lg:justify-between items-center gap-5 bg-white shadow">
@@ -37,8 +36,6 @@ const Navbar = () => {
                 + New Ticket
             </button>
           </li>  
-          
-
         </ul>
       </nav>
     </div>
