@@ -3,6 +3,7 @@ import { Suspense } from 'react'
 import './App.css'
 import Navbar from './Components/Navbar'
 import TicketContainer from './Components/TicketContainer'
+import Footer from './Components/Footer'
 
 const ticketPromise = fetch("/ticket.json").then(res => res.json())
 
@@ -20,6 +21,10 @@ function App() {
         </Suspense>
         
       </section>
+
+      <footer className='w-full bg-[#000000] mt-10'>
+        <Footer></Footer>
+      </footer>
     </div>
   )
 }
