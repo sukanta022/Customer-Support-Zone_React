@@ -23,14 +23,6 @@ For example,
 <br><br>
 <b>4) How can you share state between components in React?</b><br>
 Ans: Using the Lift Up State, it pass the data from parent component to child component. For example,<br>
-const Parent = () => {<br>
-  const [count, setCount] = useState(0);<br>
-  return (<br>
-    <div><br>
-      <ChildA count={count} /><br>
-      <ChildB setCount={setCount} /><br>
-    <div/><br>
-  );<br>
-};<br>
+<pre><code> const Parent = () =&gt; { const [count, setCount] = useState(0); return ( &lt;div&gt; &lt;ChildA count={count} /&gt; &lt;ChildB setCount={setCount} /&gt; &lt;/div&gt; ); }; const ChildA = ({ count }) =&gt; &lt;h2&gt;Count: {count}&lt;/h2&gt;; const ChildB = ({ setCount }) =&gt; &lt;button onClick={() =&gt; setCount(prev =&gt; prev + 1)&gt;Increase&lt;/button&gt;; </code></pre> <ul> <li>The <b>Parent</b> component holds the state (<code>count</code>).</li> <li><b>ChildA</b> receives <code>count</code> as a prop to display the value.</li> <li><b>ChildB</b> receives <code>setCount</code> as a prop to update the value.</li> <li>Both children share the same state via the parent.</li> </ul> <br><br>
 
 
