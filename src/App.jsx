@@ -9,7 +9,7 @@ const ticketPromise = fetch("/ticket.json").then(res => res.json())
 function App() {
   
   return (
-    <>
+    <div className='bg-[#F5F5F5]'>
       <header>
         <Navbar></Navbar>
       </header>
@@ -20,7 +20,7 @@ function App() {
         </Suspense>
         
       </section>
-    </>
+    </div>
   )
 }
 

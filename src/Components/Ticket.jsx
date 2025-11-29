@@ -1,9 +1,8 @@
 import React from 'react';
 import { Calendar } from 'lucide-react';
-const Ticket = ({ticket}) => {
-    console.log(ticket)
+const Ticket = ({ticket,handleProgress}) => {
     return (
-        <div className=' bg-[#FFFFFF] shadow p-3 space-y-3'>
+        <div onClick={() => {handleProgress(ticket)}} className=' bg-[#FFFFFF] shadow p-3 space-y-3'>
             <div className='flex justify-between items-center'>
                 <p className='text-[18px] '>{ticket.title}</p>
                 

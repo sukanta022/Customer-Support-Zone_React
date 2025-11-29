@@ -1,6 +1,6 @@
 import React from 'react';
 
-const State = () => {
+const State = ({progress}) => {
     return (
         <div className='w-11/12 py-10 grid grid-cols-2 gap-5 mx-auto text-center bg-#F5F5F5 '>
             <div
@@ -8,7 +8,7 @@ const State = () => {
                 style={{background: "linear-gradient(135deg, #4e34de 0%, #b46ff4 100%), url('/vector1.png')" }}
             >
                 <p className="text-xl">In-Progress</p>
-                <p className="text-6xl font-semibold">0</p>
+                <p className="text-6xl font-semibold">{progress}</p>
             </div>
 
 
