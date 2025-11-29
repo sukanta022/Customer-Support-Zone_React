@@ -2,7 +2,7 @@ import React from 'react';
 
 const State = ({progress,resolveCounter}) => {
     return (
-        <div className='w-11/12 py-10 grid grid-cols-2 gap-5 mx-auto text-center bg-#F5F5F5 '>
+        <div className='w-11/12 py-10 grid grid-cols-2 gap-5 mx-auto text-center bg-[#F5F5F5] '>
             <div
                 className="h-[250px] rounded-xl place-content-center text-white bg-cover bg-no-repeat flex justify-center lg:justify-between items-center"
                 style={{background: "linear-gradient(135deg, #4e34de 0%, #b46ff4 100%)"}}

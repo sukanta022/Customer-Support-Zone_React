@@ -31,7 +31,7 @@ const Navbar = () => {
           <li className="">
             <button
                 className="btn p-4 border-none text-white rounded-xl"
-                style={{ background: "linear-gradient(to right,#4e54c8, #8f94fb)" }}
+                style={{ background: "linear-gradient(135deg, #4e34de 0%, #b46ff4 100%)" }}
             >
                 + New Ticket
             </button>
