@@ -1,6 +1,6 @@
 import React from 'react';
 
-const State = ({progress}) => {
+const State = ({progress,resolveCounter}) => {
     return (
         <div className='w-11/12 py-10 grid grid-cols-2 gap-5 mx-auto text-center bg-#F5F5F5 '>
             <div
@@ -17,7 +17,7 @@ const State = ({progress}) => {
                 style={{background: "linear-gradient(to right , #38ef7d, #11998e) ,url('/vector1.png')" }}
             >
                 <p className="text-xl">Resolved</p>
-                <p className="text-6xl font-semibold">0</p>
+                <p className="text-6xl font-semibold">{resolveCounter}</p>
             </div>
         </div>
     );
