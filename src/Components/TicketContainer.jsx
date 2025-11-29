@@ -6,7 +6,6 @@ import ResolveCard from './ResolveCard';
 
 const TicketContainer = ({ticketPromise}) => {
     const allTickets = use(ticketPromise)
-    const [progress, setProgress] = useState(0)
     const [progressStore, setProgressStore] = useState([])
     const [resolveStore, setresolveStore] = useState([])
     const [tickets, setTickets] = useState(allTickets)
@@ -17,7 +16,6 @@ const TicketContainer = ({ticketPromise}) => {
             alert("task already added")
         }
         else{
-            setProgress(progress+1)
             setProgressStore([...progressStore,ticket])
         }       
     }
@@ -33,7 +31,7 @@ const TicketContainer = ({ticketPromise}) => {
     return (
         <div>
             <State 
-                progress={progress}
+                progress={progressStore.length}
                 resolveCounter={resolveStore.length}>
             </State>
 
@@ -68,7 +66,7 @@ const TicketContainer = ({ticketPromise}) => {
                         {
                             progressStore.map(task => 
                             <TaskStatus 
-                                key={progress.id}
+                                key={task.id}
                                 task={task}
                                 handleResolve={handleResolve}>
 
