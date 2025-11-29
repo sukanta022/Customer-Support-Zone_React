@@ -23,6 +23,50 @@ For example,
 <br><br>
 <b>4) How can you share state between components in React?</b><br>
 Ans: Using the Lift Up State, it pass the data from parent component to child component. For example,<br>
-<pre><code> const Parent = () =&gt; { const [count, setCount] = useState(0); return ( &lt;div&gt; &lt;ChildA count={count} /&gt; &lt;ChildB setCount={setCount} /&gt; &lt;/div&gt; ); }; const ChildA = ({ count }) =&gt; &lt;h2&gt;Count: {count}&lt;/h2&gt;; const ChildB = ({ setCount }) =&gt; &lt;button onClick={() =&gt; setCount(prev =&gt; prev + 1)&gt;Increase&lt;/button&gt;; </code></pre> <ul> <li>The <b>Parent</b> component holds the state (<code>count</code>).</li> <li><b>ChildA</b> receives <code>count</code> as a prop to display the value.</li> <li><b>ChildB</b> receives <code>setCount</code> as a prop to update the value.</li> <li>Both children share the same state via the parent.</li> </ul> <br><br>
+<pre><code>
+const Parent = () =&gt; {
+  const [count, setCount] = useState(0);
+  return (
+    &lt;div&gt;
+      &lt;ChildA count={count} /&gt;
+      &lt;ChildB setCount={setCount} /&gt;
+    &lt;/div&gt;
+  );
+};
+<br> <br>
+<b>5) How is event handling done in React?</b><br>
+Ans: Event handling is done in React using the event attribute <code>onClick</code>. Instead of calling it, we pass the function as the event handler. For example,<br>
+
+<pre><code>
+function App() {
+  function handleClick() {
+    alert("Button clicked!");
+  }
+
+  return (
+    &lt;button onClick={handleClick}&gt;
+      Click Me
+    &lt;/button&gt;
+  );
+}
+</code></pre>
+
+When we need to pass data inside the event handler function, we use an arrow function inside the event handler to avoid running it immediately; it only runs when the event happens. For example,<br>
+
+<pre><code>
+function App(data) {
+  function handleClick() {
+    alert(data);
+  }
+
+  return (
+    &lt;button onClick={() =&gt; {handleClick(data)}}&gt;
+      Click Me
+    &lt;/button&gt;
+  );
+}
+</code></pre>
+<br><br>
+
 
 
