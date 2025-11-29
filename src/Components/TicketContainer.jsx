@@ -28,6 +28,11 @@ const TicketContainer = ({ticketPromise}) => {
         setTickets(newArray2)
     }
 
+    const removeResolve = (task) => {
+        const newArray = resolveStore.filter(t => t.id !== task.id)
+        setresolveStore(newArray)
+    }
+
     return (
         <div>
             <State 
@@ -78,13 +83,16 @@ const TicketContainer = ({ticketPromise}) => {
                             <div className='w-full bg-white mt-5 p-4 space-y-3'>
                                  <h2 className='text-4xl font-bold text-[#34485A]'>Resolved Task</h2>
                                  {
-                                    resolveStore.map(t => <ResolveCard key={t.id} task={t}></ResolveCard>)
+                                    resolveStore.map(t => 
+                                        <ResolveCard 
+                                            key={t.id} 
+                                            task={t}
+                                            removeResolve={removeResolve}>
+                                        </ResolveCard>)
                                  }
                             </div>
                         )
-                    }
-
-                    
+                    } 
                 </div>
             </section>
         </div>
