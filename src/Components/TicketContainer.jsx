@@ -49,7 +49,7 @@ const TicketContainer = ({ticketPromise}) => {
 
             <section className='w-11/12 mx-auto py-10 grid grid-cols-1 lg:grid-cols-12 gap-5'>
                 <div className='lg:col-span-8 space-y-3'>
-                    <h2 className='text-4xl font-bold text-[#34485A]'>Current Order</h2>
+                    <h2 className='text-3xl lg:text-4xl font-bold text-[#34485A]'>Current Order</h2>
                     <div className='grid grid-cols-1 lg:grid-cols-2 gap-5'>
                         {
                             tickets.map(ticket => 
@@ -66,7 +66,7 @@ const TicketContainer = ({ticketPromise}) => {
                 <div className='lg:col-span-4'>
                     
                     <div className='shadow bg-white p-4 space-y-3 rounded-lg'>
-                        <h2 className='text-4xl font-bold text-[#34485A]'>Task Status</h2>
+                        <h2 className='text-3xl lg:text-4xl font-bold text-[#34485A]'>Task Status</h2>
                         {
                             progressStore.length === 0 &&(
                                 <div className='flex flex-col text-center py-15'>
@@ -88,7 +88,7 @@ const TicketContainer = ({ticketPromise}) => {
                     {
                         resolveStore.length !== 0 && (
                             <div className='w-full bg-white mt-5 p-4 space-y-3 rounded-lg'>
-                                 <h2 className='text-4xl font-bold text-[#34485A]'>Resolved Task</h2>
+                                 <h2 className='text-3xl lg:text-4xl font-bold text-[#34485A]'>Resolved Task</h2>
                                  {
                                     resolveStore.map(t => 
                                         <ResolveCard 
